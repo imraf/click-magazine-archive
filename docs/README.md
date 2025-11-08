@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="click-logo.jpg" alt="Click Magazine Logo" width="400">
+</p>
+
 # Click Magazine Archive Website
 
 Click Magazine was a short running high-quality gaming magazine in Israel. As far as I can tell, there have only ever been 10 issues. I've managed to find and scan these issues, as well as mapped the content and created an index, to make them easily searchable.
