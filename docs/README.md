@@ -1,6 +1,9 @@
 # Click Magazine Archive Website
 
-A beautiful, fast, and modern website for browsing the Click magazine archive - an Israeli gaming magazine from the early 2000s.
+Click Magazine was a short running high-quality gaming magazine in Israel. As far as I can tell, there have only ever been 10 issues. I've managed to find and scan these issues, as well as mapped the content and created an index, to make them easily searchable.
+
+This is now presented to you as a modern website for browsing the Click magazine archive. Enjoy!
+
 
 ## Features
 
@@ -38,18 +41,6 @@ The `click_index.json` contains:
   - Hebrew and English names
   - Category (game_review, article, gadget, cheatcode, kids_game)
   - Issue number and Archive.org links
-
-## Deployment
-
-This site is designed for GitHub Pages:
-
-1. Push to GitHub repository
-2. Go to Settings → Pages
-3. Select "Deploy from a branch"
-4. Choose `main` branch and `/docs` folder
-5. Save and wait for deployment
-
-Your site will be available at: `https://[username].github.io/[repo-name]/`
 
 ## Local Development
 
@@ -90,9 +81,3 @@ The search supports:
 ## License
 
 The website code is provided as-is for archival purposes. Original magazine content © Click Magazine / respective publishers.
-
-## Credits
-
-- Magazine scans courtesy of Archive.org
-- Original index compiled from magazine content
-- Website designed for the Click Magazine Archive project
