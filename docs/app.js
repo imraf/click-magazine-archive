@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     initializeUI();
     renderIssuesGallery();
     setupEventListeners();
+    setupScrollBehavior();
 });
 
 // Load magazine data from JSON
@@ -299,6 +300,21 @@ function escapeHtml(text) {
     const div = document.createElement('div');
     div.textContent = text;
     return div.innerHTML;
+}
+
+// Setup scroll behavior for header
+function setupScrollBehavior() {
+    const header = document.getElementById('mainHeader');
+    
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop === 0) {
+            header.classList.remove('scrolled');
+        } else {
+            header.classList.add('scrolled');
+        }
+    }, { passive: true });
 }
 
 // Export functions to global scope for onclick handlers
