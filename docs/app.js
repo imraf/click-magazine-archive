@@ -196,7 +196,7 @@ function renderIssuesGallery() {
                     </div>
                     ${gameReviews.length > 0 ? `
                         <div class="game-highlights">
-                            <h4 class="highlights-title">🎮 משחקים</h4>
+                            <h4 class="highlights-title">🎮 סיקורים</h4>
                             <ul class="game-list">
                                 ${gameReviews.map(game => `
                                     <li class="game-item">${game.name_english}</li>
