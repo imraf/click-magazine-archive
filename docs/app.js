@@ -10,7 +10,35 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderIssuesGallery();
     setupEventListeners();
     setupScrollBehavior();
+    initializeDarkMode();
 });
+
+// Dark Mode
+function initializeDarkMode() {
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const toggleIcon = darkModeToggle.querySelector('.toggle-icon');
+    
+    // Check for saved preference or default to light mode
+    const savedMode = localStorage.getItem('darkMode');
+    if (savedMode === 'enabled') {
+        document.body.classList.add('dark-mode');
+        toggleIcon.textContent = '☀️';
+    }
+    
+    // Toggle dark mode
+    darkModeToggle.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevent header click from triggering
+        document.body.classList.toggle('dark-mode');
+        
+        if (document.body.classList.contains('dark-mode')) {
+            toggleIcon.textContent = '☀️';
+            localStorage.setItem('darkMode', 'enabled');
+        } else {
+            toggleIcon.textContent = '🌙';
+            localStorage.setItem('darkMode', 'disabled');
+        }
+    });
+}
 
 // Load magazine data from JSON
 async function loadMagazineData() {
