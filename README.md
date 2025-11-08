@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="click-logo.jpg" alt="Click Magazine Logo" width="400">
+  <img src="docs/click-logo.jpg" alt="Click Magazine Logo" width="400">
 </p>
 
 # Click Magazine Archive Website
