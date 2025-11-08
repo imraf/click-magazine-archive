@@ -4,15 +4,18 @@
 
 # Click Magazine Archive Website
 
+Click Magazine was a short running high-quality gaming magazine in Israel. As far as I can tell, there have only ever been 10 issues. I've managed to find and scan these issues, as well as mapped the content and created an index, to make them easily searchable.
+
+This is now presented to you as a modern website for browsing the Click magazine archive. Enjoy!
+
+<p align="center">
+  <img src="docs/preview.jpg" alt="Website Preview" width="800">
+</p>
 <p align="center">
   <a href="https://imraf.github.io/click-magazine-archive/" target="_blank">
     <strong>🌐 Visit the Live Website</strong>
   </a>
 </p>
-
-Click Magazine was a short running high-quality gaming magazine in Israel. As far as I can tell, there have only ever been 10 issues. I've managed to find and scan these issues, as well as mapped the content and created an index, to make them easily searchable.
-
-This is now presented to you as a modern website for browsing the Click magazine archive. Enjoy!
 
 
 ## Features
