@@ -43,15 +43,41 @@ body {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     box-shadow: var(--shadow-md);
-    padding: 2rem 0;
+    padding: 1.5rem 0;
     margin-bottom: 2rem;
     position: sticky;
     top: 0;
     z-index: 100;
+    transition: padding 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header.scrolled {
+    padding: 0.75rem 0;
+    box-shadow: var(--shadow-lg);
 }
 
 .header-content {
     text-align: center;
+    transition: var(--transition);
+}
+
+.header-content:hover {
+    opacity: 0.8;
+}
+
+.logo-container {
+    transition: var(--transition);
+}
+
+.header-logo {
+    max-width: 250px;
+    height: auto;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.header.scrolled .header-logo {
+    max-width: 120px;
 }
 
 .logo {
@@ -300,6 +326,16 @@ body {
     overflow: hidden;
 }
 
+.issue-cover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
 .issue-cover::before {
     content: '';
     position: absolute;
@@ -310,6 +346,7 @@ body {
     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" x="50" text-anchor="middle" dominant-baseline="middle" font-size="40" fill="white" opacity="0.2">CLICK</text></svg>');
     background-size: cover;
     background-position: center;
+    z-index: 0;
 }
 
 .issue-number {
@@ -491,6 +528,14 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .header-logo {
+        max-width: 180px;
+    }
+
+    .header.scrolled .header-logo {
+        max-width: 90px;
+    }
+
     .logo {
         font-size: 2rem;
     }

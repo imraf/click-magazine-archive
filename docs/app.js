@@ -171,10 +171,12 @@ function renderIssuesGallery() {
     issuesGrid.innerHTML = magazineData.issues.map(issue => {
         const itemCount = issue.items.length;
         const categoryBreakdown = getCategoryBreakdown(issue.items);
+        const coverImg = `covers/cover-${String(issue.issue_number).padStart(2, '0')}.jpg`;
         
         return `
             <div class="issue-card" onclick="openIssue(${issue.issue_number})">
                 <div class="issue-cover">
+                    <img src="${coverImg}" alt="Click Magazine Issue ${issue.issue_number}" class="issue-cover-img" loading="lazy">
                     <div class="issue-number">#${issue.issue_number}</div>
                 </div>
                 <div class="issue-info">
@@ -215,7 +217,7 @@ function openIssue(issueNumber) {
     
     // Set Archive.org iframe
     const archiveViewer = document.getElementById('archiveViewer');
-    archiveViewer.src = `${issue.archive_url}mode/2up`;
+    archiveViewer.src = `${issue.archive_url}/mode/2up`;
 
     // Render issue contents
     renderIssueContents(issue);
@@ -281,6 +283,11 @@ function showGallery() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+// Return to gallery (used by header click)
+function returnToGallery() {
+    showGallery();
+}
+
 // Show viewer section
 function showViewer() {
     document.getElementById('gallerySection').style.display = 'none';
@@ -297,3 +304,4 @@ function escapeHtml(text) {
 // Export functions to global scope for onclick handlers
 window.openIssue = openIssue;
 window.openIssueFromSearch = openIssueFromSearch;
+window.returnToGallery = returnToGallery;
