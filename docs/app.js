@@ -174,6 +174,13 @@ function renderIssuesGallery() {
         const categoryBreakdown = getCategoryBreakdown(issue.items);
         const coverImg = `covers/cover-${String(issue.issue_number).padStart(2, '0')}.jpg`;
         
+        // Get game reviews for this issue
+        const gameReviews = issue.items
+            .filter(item => item.category === 'game_review')
+            .slice(0, 5); // Show first 5 games
+        
+        const hasMoreGames = issue.items.filter(item => item.category === 'game_review').length > 5;
+        
         return `
             <div class="issue-card" onclick="openIssue(${issue.issue_number})">
                 <div class="issue-cover">
@@ -187,6 +194,17 @@ function renderIssuesGallery() {
                         <span>|</span>
                         <span>${categoryBreakdown}</span>
                     </div>
+                    ${gameReviews.length > 0 ? `
+                        <div class="game-highlights">
+                            <h4 class="highlights-title">🎮 משחקים</h4>
+                            <ul class="game-list">
+                                ${gameReviews.map(game => `
+                                    <li class="game-item">${game.name_english}</li>
+                                `).join('')}
+                                ${hasMoreGames ? '<li class="game-item more">+ עוד...</li>' : ''}
+                            </ul>
+                        </div>
+                    ` : ''}
                 </div>
             </div>
         `;

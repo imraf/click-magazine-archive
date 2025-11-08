@@ -347,6 +347,53 @@ body {
     gap: 1rem;
     color: var(--text-secondary);
     font-size: 0.875rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.game-highlights {
+    margin-top: 0.5rem;
+}
+
+.highlights-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.game-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.game-item {
+    font-size: 0.875rem;
+    color: var(--text-primary);
+    padding: 0.5rem;
+    background: var(--bg-color);
+    border-radius: 0.375rem;
+    transition: var(--transition);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.game-item:hover {
+    background: var(--border-color);
+    transform: translateX(-2px);
+}
+
+.game-item.more {
+    color: var(--text-secondary);
+    font-style: italic;
+    text-align: center;
 }
 
 /* Viewer Section */
