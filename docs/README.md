@@ -1,0 +1,98 @@
+# Click Magazine Archive Website
+
+A beautiful, fast, and modern website for browsing the Click magazine archive - an Israeli gaming magazine from the early 2000s.
+
+## Features
+
+- 📚 **Magazine Gallery** - Browse all 10 issues with beautiful cover cards
+- 🔍 **Real-time Search** - Search in both Hebrew and English as you type
+- 🏷️ **Category Filters** - Filter by game reviews, articles, gadgets, cheat codes, and kids games
+- 📖 **Archive.org Integration** - Read magazines directly using Archive.org's embedded viewer
+- 🌐 **Bilingual Support** - Full support for Hebrew and English content
+- ⚡ **Lightning Fast** - Static site with no backend dependencies
+- 📱 **Responsive Design** - Works beautifully on mobile, tablet, and desktop
+
+## Technology Stack
+
+- Pure HTML5, CSS3, and JavaScript (ES6+)
+- No frameworks or build tools required
+- Google Fonts (Heebo & Rubik for Hebrew support)
+- Archive.org embedded viewer
+
+## Project Structure
+
+```
+docs/
+├── index.html          # Main HTML page
+├── styles.css          # All styles and responsive design
+├── app.js              # Search, filtering, and viewer logic
+└── click_index.json    # Magazine content index (273 items)
+```
+
+## Data Structure
+
+The `click_index.json` contains:
+- **Metadata**: Total issues, items, and categories
+- **Issues**: All 10 issues with Archive.org URLs
+- **Items**: 273 searchable items with:
+  - Hebrew and English names
+  - Category (game_review, article, gadget, cheatcode, kids_game)
+  - Issue number and Archive.org links
+
+## Deployment
+
+This site is designed for GitHub Pages:
+
+1. Push to GitHub repository
+2. Go to Settings → Pages
+3. Select "Deploy from a branch"
+4. Choose `main` branch and `/docs` folder
+5. Save and wait for deployment
+
+Your site will be available at: `https://[username].github.io/[repo-name]/`
+
+## Local Development
+
+Simply open `index.html` in a browser, or use a local server:
+
+```bash
+# Using Python
+cd docs
+python -m http.server 8000
+
+# Using Node.js
+cd docs
+npx serve
+
+# Using VS Code Live Server extension
+# Right-click index.html → "Open with Live Server"
+```
+
+Then visit `http://localhost:8000` (or the port shown)
+
+## Search Functionality
+
+The search supports:
+- **Hebrew text**: משחקים, כתבות, גאדג'טים
+- **English text**: games, articles, gadgets
+- **Game names**: Diablo 2, Deus Ex, The Sims
+- **Partial matches**: Types "diab" finds "Diablo 2"
+- **Real-time filtering**: Results update as you type
+- **Category filters**: Filter by content type
+
+## Browser Support
+
+- Chrome/Edge 90+
+- Firefox 88+
+- Safari 14+
+- Mobile browsers (iOS Safari, Chrome Mobile)
+
+## License
+
+The website code is provided as-is for archival purposes. Original magazine content © Click Magazine / respective publishers.
+
+## Credits
+
+- Magazine scans courtesy of Archive.org
+- Original index compiled from magazine content
+- Website designed for the Click Magazine Archive project

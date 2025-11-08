@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ארכיון מגזין Click - Click Magazine Archive</title>
+    <meta name="description" content="ארכיון דיגיטלי של מגזין Click - מגזין המשחקים הישראלי מתחילת שנות ה-2000">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">
+                    <span class="logo-hebrew">מגזין Click</span>
+                    <span class="logo-subtitle">ארכיון דיגיטלי 2000-2001</span>
+                </h1>
+                <p class="tagline">מגזין המשחקים הישראלי | Israeli Gaming Magazine</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <!-- Search Section -->
+            <section class="search-section">
+                <div class="search-container">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        class="search-input" 
+                        placeholder="חפש משחקים, כתבות, גאדג'טים... | Search games, articles, gadgets..."
+                        autocomplete="off"
+                    >
+                    <div class="search-icon">🔍</div>
+                </div>
+                
+                <!-- Filter Buttons -->
+                <div class="filter-buttons" id="filterButtons">
+                    <button class="filter-btn active" data-filter="all">הכל</button>
+                    <button class="filter-btn" data-filter="game_review">ביקורות משחקים</button>
+                    <button class="filter-btn" data-filter="article">כתבות</button>
+                    <button class="filter-btn" data-filter="gadget">גאדג'טים</button>
+                    <button class="filter-btn" data-filter="cheatcode">קודי רמאות</button>
+                    <button class="filter-btn" data-filter="kids_game">משחקי ילדים</button>
+                </div>
+
+                <!-- Search Results -->
+                <div class="search-results" id="searchResults" style="display: none;">
+                    <div class="results-header">
+                        <h3 id="resultsCount">0 תוצאות</h3>
+                        <button class="close-results" id="closeResults">✕</button>
+                    </div>
+                    <div class="results-list" id="resultsList"></div>
+                </div>
+            </section>
+
+            <!-- Gallery Section -->
+            <section class="gallery-section" id="gallerySection">
+                <h2 class="section-title">כל הגיליונות | All Issues</h2>
+                <div class="issues-grid" id="issuesGrid">
+                    <!-- Issues will be dynamically loaded -->
+                </div>
+            </section>
+
+            <!-- Issue Viewer Section -->
+            <section class="viewer-section" id="viewerSection" style="display: none;">
+                <div class="viewer-header">
+                    <button class="back-btn" id="backBtn">← חזרה לגלריה</button>
+                    <h2 id="viewerTitle">גיליון #1</h2>
+                </div>
+                <div class="viewer-container">
+                    <iframe 
+                        id="archiveViewer" 
+                        class="archive-iframe"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+                <div class="issue-contents" id="issueContents">
+                    <h3>תוכן הגיליון | Issue Contents</h3>
+                    <div class="contents-list" id="contentsList"></div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>ארכיון מגזין Click | Click Magazine Archive</p>
+            <p class="footer-note">
+                מגזין Click היה מגזין משחקים ישראלי שיצא לאור בשנים 2000-2001 
+                <br>
+                All magazines available at 
+                <a href="https://archive.org/details/click_magazine" target="_blank" rel="noopener noreferrer">
+                    Archive.org
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
